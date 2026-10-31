@@ -8,7 +8,8 @@ This project is a multi-container setup built for a development and testing envi
 The primary goals and details of this repository are:
 
 - Exercise Submission: This project is an answer submission for Exercise 2.11 in Chapter 3 of the DevOps with Docker (Fall 2026) course by the University of Helsinki.
-- Remote Repository: The full codebase and configuration history are stored in the public remote repository: https://github.com/walkerchu/multi-containers
+- Remote Repository: The full codebase and configuration history are stored in the public remote repository:
+    > https://github.com/walkerchu/multi-containers
 - What We Did: We built a fully containerized development environment that links multiple separate containers together. This allows a developer to write code in the web service while a QA tester runs isolated browser validation suites in another container at the same time.
 
 ## Background and Architecture
@@ -41,7 +42,7 @@ Below is the project directory tree. It shows the layout of our multi-container 
 └── docker-compose.yaml         <-- Root orchestration file that includes sub-compose configurations
 ```
 
-# How the Environments Interact
+## How the Environments Interact
 
 This project connects three different layers together: local Windows Subsystem for Linux (WSL) host, the Web application container, and the QA testing container. 
 

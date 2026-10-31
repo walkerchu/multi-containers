@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Flow | Software Quality</title>
+    <link rel="icon" href="star-96.png" type="image/x-icon" />
+    <style>
+        :root {
+            --bg: #fdf6f6;
+            --primary: #a8dadc;
+            --secondary: #ffb7b2;
+            --accent: #b5ead7;
+            --text: #4a4e69;
+            --card: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--card);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+        }
+
+        .hero {
+            padding: 80px 5%;
+            text-align: center;
+            background: linear-gradient(180deg, #ffffff 0%, var(--bg) 100%);
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin: 0;
+            color: #222;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: var(--primary);
+            color: white;
+            border-radius: 4px;
+            text-decoration: none;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            padding: 50px 5%;
+        }
+
+        .card {
+            background: var(--card);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            border-top: 4px solid var(--secondary);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <strong>TestFlow</strong>
+        <nav>
+            <a href="#">Process</a>
+            <a href="#">Tools</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Flawless Code, Every Time.</h1>
+        <p>Master the art of software testing with our automated quality assurance workflows and manual verification
+            frameworks.</p>
+        <a id="action-btn" href="#" class="btn">Get Started</a>
+        <p id="message"></p>
+    </section>
+
+    <section class="features">
+        <div class="card">
+            <h3>Unit Testing</h3>
+            <p>Verify individual components to ensure the foundation of your logic is unbreakable.</p>
+        </div>
+        <div class="card" style="border-color: var(--accent);">
+            <h3>Integration</h3>
+            <p>Seamlessly test how modules interact, preventing friction in complex architectures.</p>
+        </div>
+        <div class="card" style="border-color: var(--primary);">
+            <h3>End-to-End</h3>
+            <p>Simulate real user journeys to validate the entire system from start to finish.</p>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2026 Test Flow QA Systems. All rights reserved.
+    </footer>
+    <!-- frontend JS file -->
+    <script src="app.js"></script>
+</body>
+
+</html>

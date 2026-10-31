@@ -1,0 +1,17 @@
+# DevOps with Docker, Fall 2026
+# offer by The University of Helsinki
+# chapter 3/containers-in-development
+# url: https://courses.mooc.fi/org/uh-cs/courses/devops-with-docker-fall-2026/chapter-3/containers-in-development
+# Exercise 2.11. Your dev env
+# created at Oct 25, 2026 21:00 HKT
+
+services:
+  web-app:
+    image: node:18-alpine
+    volumes:
+      - .:/workspace/web
+    working_dir: /workspace/web
+    ports:
+      - "3000:3000"
+    command: sh -c "npm install && node server.js"
+    container_name: webpage

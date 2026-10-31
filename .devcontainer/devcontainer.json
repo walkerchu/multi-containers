@@ -1,0 +1,17 @@
+{
+  "name": "Dev Container: Playwright QA Box",
+  "dockerComposeFile": ["../docker-compose.yaml"],
+  "service": "playwright-runner",
+  "shutdownAction": "none",
+  "workspaceFolder": "/workspace/qa",
+  "postCreateCommand": "npm install",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "playwright.features.playback": true,
+        "playwright.features.traceviewer": true
+      },
+      "extensions": ["ms-playwright.playwright", "dbaeumer.vscode-eslint"]
+    }
+  }
+}

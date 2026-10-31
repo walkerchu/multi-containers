@@ -1,0 +1,27 @@
+# DevOps with Docker, Fall 2026
+# offer by The University of Helsinki
+# chapter 3/containers-in-development
+# url: https://courses.mooc.fi/org/uh-cs/courses/devops-with-docker-fall-2026/chapter-3/containers-in-development
+# Exercise 2.11. Your dev env
+# created at Oct 25, 2026 22:08 HKT
+
+# REMARK :
+# 1. As advised in https://code.visualstudio.com/remote/advancedcontainers/connect-multiple-containers,
+#    "The location of the .git folder is important, since we will need to ensure
+#     the containers can see this path for source control to work properly."
+# 2. Therefore, this docker compose file is placed in project root folder 'multi-containers'
+
+include:
+  - ./web/docker-compose.yaml
+
+services:
+  playwright-runner:
+    image: mcr.microsoft.com/playwright:v1.64.1-noble
+    ipc: host
+    init: true
+    volumes:
+      - .:/workspace
+    working_dir: /workspace/qa
+    depends_on:
+      - web-app
+    command: sleep infinity
